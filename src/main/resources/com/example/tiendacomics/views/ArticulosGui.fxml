@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="904.0" prefWidth="1283.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendacomics.controller.ControladorArticulo">
+   <children>
+      <Button layoutX="681.0" layoutY="369.0" mnemonicParsing="false" onAction="#modificarArticulo" prefHeight="69.0" prefWidth="100.0" text="Modificar Artículo Existente" textAlignment="JUSTIFY" wrapText="true" />
+      <HBox layoutX="59.0" layoutY="79.0" prefHeight="61.0" prefWidth="726.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="62.0" prefWidth="267.0" text="Buscar nombre articulo : ">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="nombreArticulo" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#buscarArticulo" onKeyTyped="#barraBuscador" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <ImageView fx:id="imagenArticulo" fitHeight="288.0" fitWidth="436.0" layoutX="198.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" />
+      <HBox layoutX="36.0" layoutY="475.0" prefHeight="61.0" prefWidth="759.0" />
+      <Button disable="true" layoutX="1109.0" layoutY="777.0" mnemonicParsing="false" onAction="#abrirCaja" prefHeight="69.0" prefWidth="100.0" text=" Abrir caja" textAlignment="JUSTIFY" wrapText="true" />
+      <Button layoutX="681.0" layoutY="274.0" mnemonicParsing="false" onAction="#quitarArticuloBBDD" prefHeight="69.0" prefWidth="100.0" text="Quitar Artículo de BBDD" textAlignment="JUSTIFY" wrapText="true" />
+      <Button layoutX="681.0" layoutY="179.0" mnemonicParsing="false" onAction="#anadirArticuloBBDD" prefHeight="69.0" prefWidth="100.0" text="Añadir Articulo a BBDD" wrapText="true" />
+      <Button layoutX="964.0" layoutY="33.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="46.0" prefWidth="100.0" text="Cerrar Sesión" textAlignment="JUSTIFY" wrapText="true" />
+      <Label fx:id="usuarioActivo" alignment="CENTER" layoutX="864.0" layoutY="32.0" prefHeight="48.0" prefWidth="100.0" text="Usuario" />
+       <MenuBar fx:id="pestanas" layoutX="59.0" layoutY="16.0" prefHeight="25.0" prefWidth="726.0">
+           <menus>
+               <Menu mnemonicParsing="false">
+                   <graphic>
+                       <Button mnemonicParsing="false" onAction="#pestanaVentas" text="Ventas" />
+                   </graphic></Menu>
+               <Menu mnemonicParsing="false">
+                   <graphic>
+                       <Button mnemonicParsing="false" onAction="#pestanaArticulos" text="Articulos" />
+                   </graphic></Menu>
+               <Menu mnemonicParsing="false">
+                   <graphic>
+                       <Button mnemonicParsing="false" onAction="#pestanaHistorial" text="Historial" />
+                   </graphic></Menu>
+           </menus>
+       </MenuBar>
+      <HBox alignment="CENTER" layoutX="111.0" layoutY="472.0" minHeight="25.0" minWidth="-Infinity" prefHeight="26.0" prefWidth="921.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="874.0" layoutY="141.0" minHeight="9.0" minWidth="-Infinity" prefHeight="9.0" prefWidth="924.0">
+               <children>
+                  <Label alignment="CENTER" minHeight="-Infinity" prefHeight="26.0" prefWidth="90.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: lightgrey; -fx-font-weight: bold;" text="Codigo" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="26.0" prefWidth="155.0" style="-fx-border-width: 2; -fx-border-color: black; -fx-background-color: lightgrey;  -fx-font-weight: bold;" text="Nombre" />
+                  <Label alignment="CENTER" minHeight="-Infinity" prefHeight="26.0" prefWidth="102.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: lightgrey; -fx-font-weight: bold;" text="Precio" textAlignment="CENTER" />
+                  <Label alignment="CENTER" minHeight="-Infinity" prefHeight="26.0" prefWidth="102.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: lightgrey; -fx-font-weight: bold;" text="Stock" />
+                  <Label alignment="CENTER" layoutX="723.0" layoutY="20.0" minHeight="-Infinity" prefHeight="26.0" prefWidth="118.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: lightgrey; -fx-font-weight: bold;" text="Descripción" />
+                  <Label alignment="CENTER" layoutX="686.0" layoutY="20.0" minHeight="-Infinity" prefHeight="25.0" prefWidth="102.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: lightgrey; -fx-font-weight: bold;" text="Num. Volumen" />
+                  <Label alignment="CENTER" layoutX="797.0" layoutY="20.0" minHeight="-Infinity" prefHeight="25.0" prefWidth="102.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: lightgrey; -fx-font-weight: bold;" text="Colección" />
+                  <Label alignment="CENTER" layoutX="760.0" layoutY="20.0" minHeight="-Infinity" prefHeight="25.0" prefWidth="102.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: lightgrey; -fx-font-weight: bold;" text="Tipo" />
+                  <Label alignment="CENTER" layoutX="835.0" layoutY="20.0" minHeight="-Infinity" prefHeight="25.0" prefWidth="102.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: lightgrey; -fx-font-weight: bold;" text="Talla" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <ScrollPane layoutX="109.0" layoutY="497.0" prefHeight="363.0" prefWidth="933.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="364.0" prefWidth="925.0">
+               <children>
+                  <VBox fx:id="tabla" layoutY="-1.0" prefHeight="363.0" prefWidth="924.0" style="-fx-border-color: black; -fx-border-width: 2;" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>

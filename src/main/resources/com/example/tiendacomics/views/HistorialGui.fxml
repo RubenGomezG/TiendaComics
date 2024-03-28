@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="contenedor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="904.0" prefWidth="1283.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiendacomics.controller.ControladorHistorial">
+   <children>
+      <VBox layoutX="59.0" layoutY="511.0" prefHeight="363.0" prefWidth="750.0">
+         <children>
+            <HBox VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="Nombre">
+                     <font>
+                        <Font name="Verdana Bold" size="23.0" />
+                     </font></Label>
+                  <Label fx:id="nombreActual" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="400.0" text="Label" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana Italic" size="23.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox VBox.vgrow="ALWAYS">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="Código">
+                     <font>
+                        <Font name="Verdana Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="codArtActual" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="400.0" text="Label" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana Italic" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox VBox.vgrow="ALWAYS">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="Precio">
+                     <font>
+                        <Font name="Verdana Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="precioArtActual" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="400.0" text="Label" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana Italic" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox VBox.vgrow="ALWAYS">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="Descripción">
+                     <font>
+                        <Font name="Verdana Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="masInfoActual" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="400.0" text="Label" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Verdana Italic" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <GridPane layoutX="896.0" layoutY="666.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="69.0" prefWidth="331.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.7999755859375" minWidth="10.0" prefWidth="111.99998779296875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.80002441406248" minWidth="10.0" prefWidth="115.20004882812498" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.60002441406249" minWidth="10.0" prefWidth="95.39995117187499" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="69.0" prefWidth="198.0" text="TOTAL :">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="importe" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="38.0" prefWidth="122.0" text="Importe" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Verdana Bold" size="21.0" />
+               </font></Label>
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="69.0" prefWidth="156.0" text="€" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <HBox layoutX="28.0" layoutY="57.0" prefHeight="61.0" prefWidth="759.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="62.0" prefWidth="178.0" text="Buscar NºTicket :">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="numeroTicketBuscar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#buscarTicket" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <ImageView fx:id="imagenArticulo" fitHeight="363.0" fitWidth="759.0" layoutX="28.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" />
+      <Button disable="true" layoutX="1139.0" layoutY="805.0" mnemonicParsing="false" onAction="#abrirCaja" prefHeight="69.0" prefWidth="100.0" text=" Abrir caja" textAlignment="JUSTIFY" wrapText="true" />
+      <Button layoutX="1139.0" layoutY="14.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="46.0" prefWidth="100.0" text="Cerrar Sesión" textAlignment="JUSTIFY" wrapText="true" />
+      <Label fx:id="usuarioActivo" alignment="CENTER" layoutX="1017.0" layoutY="16.0" prefHeight="48.0" prefWidth="100.0" text="Usuario" />
+      <Label fx:id="numTicket" layoutX="1010.0" layoutY="68.0" prefHeight="69.0" prefWidth="200.0" style="-fx-padding: 20;" text="---">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="913.0" layoutY="64.0" prefHeight="77.0" prefWidth="144.0" style="-fx-padding: 20;" text="Ticket Nº : ">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="Verdana Bold" size="15.0" />
+         </font>
+      </Label>
+      <MenuBar fx:id="pestanas" layoutX="59.0" layoutY="16.0" prefHeight="25.0" prefWidth="726.0">
+         <menus>
+            <Menu mnemonicParsing="false">
+               <graphic>
+                  <Button mnemonicParsing="false" onAction="#pestanaVentas" text="Ventas" />
+               </graphic>
+            </Menu>
+            <Menu mnemonicParsing="false">
+               <graphic>
+                  <Button mnemonicParsing="false" onAction="#pestanaArticulos" text="Articulos" />
+               </graphic>
+            </Menu>
+            <Menu mnemonicParsing="false">
+               <graphic>
+                  <Button mnemonicParsing="false" onAction="#pestanaHistorial" text="Historial" />
+               </graphic>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <HBox alignment="CENTER" layoutX="874.0" layoutY="141.0" minHeight="25.0" minWidth="-Infinity" prefHeight="25.0" prefWidth="358.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="25.0" prefWidth="147.0" style="-fx-border-width: 2; -fx-border-color: black; -fx-background-color: lightgrey;  -fx-font-weight: bold;" text="Nombre" />
+            <Label alignment="CENTER" minHeight="-Infinity" prefHeight="25.0" prefWidth="71.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: lightgrey; -fx-font-weight: bold;" text="Precio" textAlignment="CENTER" />
+            <Label alignment="CENTER" minHeight="-Infinity" prefHeight="25.0" prefWidth="74.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: lightgrey; -fx-font-weight: bold;" text="Cantidad" />
+            <Label alignment="CENTER" minHeight="-Infinity" prefHeight="25.0" prefWidth="92.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: lightgrey; -fx-font-weight: bold;" text="vol/talla" />
+         </children>
+      </HBox>
+      <ScrollPane layoutX="874.0" layoutY="166.0" prefHeight="518.0" prefWidth="373.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="518.0" prefWidth="374.0">
+               <children>
+                  <VBox fx:id="ticket" layoutY="-1.0" prefHeight="505.0" prefWidth="358.0">
+                     <children>
+<!--                        <HBox fx:id="articuloEnTicket" alignment="CENTER" minHeight="30.0" minWidth="-Infinity" onMouseClicked="#seleccionarArticuloDeTicket" prefHeight="46.0" prefWidth="358.0">-->
+<!--                           <children>-->
+<!--                              <Label fx:id="nombreTicket" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="46.0" prefWidth="145.0" style="-fx-border-width: 1; -fx-border-color: black;" text="Nombre" />-->
+<!--                              <Label fx:id="precioTicket" alignment="CENTER" minHeight="-Infinity" prefHeight="46.0" prefWidth="70.0" style="-fx-border-color: black; -fx-border-width: 1;" text="Precio" textAlignment="CENTER" />-->
+<!--                              <Label fx:id="cantidadTicket" alignment="CENTER" minHeight="-Infinity" prefHeight="46.0" prefWidth="72.0" style="-fx-border-color: black; -fx-border-width: 1;" text="Cantidad" />-->
+<!--                              <Label fx:id="infoExtraTicket" alignment="CENTER" minHeight="-Infinity" prefHeight="46.0" prefWidth="89.0" style="-fx-border-color: black; -fx-border-width: 1;" text="Más información" />-->
+<!--                           </children>-->
+<!--                        </HBox>-->
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>
